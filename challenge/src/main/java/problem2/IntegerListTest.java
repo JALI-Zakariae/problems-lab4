@@ -1,9 +1,10 @@
+
 package problem2;
 
 import java.util.Scanner;
 public class IntegerListTest
 {
-    static IntegerList list = new IntegerList(10);
+    static IntegerList list = new IntegerList(5);
     static Scanner scan = new Scanner(System.in);
     //-------------------------------------------------------
 // Create a list, then repeatedly print the menu and do what the
@@ -40,6 +41,21 @@ public class IntegerListTest
             case 2:
                 list.print();
                 break;
+            case 3:
+                System.out.println("The number you want to add:");
+                list.addElement(scan.nextInt());
+
+
+                break;
+            case 4:
+                System.out.println("The number you want to remove:");
+                list.removeAll(scan.nextInt());
+            case 5:
+                System.out.println("The number you want to remove:");
+                list.removeFirst(scan.nextInt());
+
+
+
             default:
                 System.out.println("Sorry, invalid choice");
         }
@@ -54,6 +70,9 @@ public class IntegerListTest
         System.out.println("0: Quit");
         System.out.println("1: Create a new list (** do this first!! **)");
         System.out.println("2: Print the list");
+        System.out.println("3: Adding elements");
+        System.out.println("4: Removing all occurences of a number");
+        System.out.println("5: Removing the first occurence of a number");
         System.out.print("\nEnter your choice: ");
     }
 }
